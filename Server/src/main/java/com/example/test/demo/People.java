@@ -12,9 +12,5 @@ import javax.persistence.Entity;
 public class People {
     @Id @GeneratedValue
     private Long id;
-    private @NonNull String name;
-	public void setName(String value) {
-        this.name = value;
-    }
-    
+    private @NonNull String name;  
 }

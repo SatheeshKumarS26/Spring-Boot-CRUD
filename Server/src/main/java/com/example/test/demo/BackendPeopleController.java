@@ -14,15 +14,15 @@ class BackendPeopleController {
     }
 
     @GetMapping("/backend")
-    public Collection<People> coolCars() {
+    public Collection<People> backendPeoples() {
         return repository.findAll().stream()
                 .filter(this::isTrue)
                 .collect(Collectors.toList());
     }
 
     private boolean isTrue(People people) {
-        return  people.getName().equals("Satheesh") &&
-                 people.getName().equals("Yowan") &&
-                 people.getName().equals("Shreesh");
+        return  !people.getName().equals("Satheesh") &&
+                 !people.getName().equals("Yowan") &&
+                 !people.getName().equals("Shreesh");
     }
 }
