@@ -13,4 +13,8 @@ public class People {
     @Id @GeneratedValue
     private Long id;
     private @NonNull String name;
+	public void setName(String value) {
+        this.name = value;
+    }
+    
 }
