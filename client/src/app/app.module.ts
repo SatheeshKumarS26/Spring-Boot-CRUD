@@ -5,11 +5,15 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PeopleListComponent } from './people-list/people-list.component';
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { PeopleEditComponent } from './people-edit/people-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeopleListComponent
+    PeopleListComponent,
+    PeopleEditComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +23,9 @@ import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolb
     MatCardModule,
     MatInputModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

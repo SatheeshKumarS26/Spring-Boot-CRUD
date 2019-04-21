@@ -1,11 +1,12 @@
 <mat-card>
-  <mat-card-title>Car List</mat-card-title>
+  <mat-card-title>People List</mat-card-title>
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let p of people">
         <img mat-list-avatar src="{{p.giphyUrl}}" alt="{{p.name}}">
-        <h3 mat-line>{{p.name}}</h3>
+        <h3 mat-line><a mat-button [routerLink]="['/people-edit', p.id]">{{p.name}}</a></h3>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
+  <button mat-fab color="primary" [routerLink]="['/people-add']">Add</button>
 </mat-card>

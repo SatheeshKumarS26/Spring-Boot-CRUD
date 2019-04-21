@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
+@CrossOrigin
 class BackendPeopleController {
     private PeopleRepository repository;
 
@@ -15,7 +16,6 @@ class BackendPeopleController {
     }
 
     @GetMapping("/backend")
-    @CrossOrigin(origins = "http://localhost:4200")
     public Collection<People> backendPeoples() {
         return repository.findAll().stream()
                 .filter(this::isTrue)
